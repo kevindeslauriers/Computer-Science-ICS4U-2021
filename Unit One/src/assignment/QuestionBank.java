@@ -5,11 +5,13 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class QuestionBank {
+
+  private static final int MAX_QUESTIONS = 1000;
   private Question[] questions;
   private int numQuestions;
 
   public QuestionBank(String fileName) {
-    questions = new Question[1000];
+    questions = new Question[MAX_QUESTIONS];
     addAllQuestions(fileName);
   }
 
