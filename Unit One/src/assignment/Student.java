@@ -6,4 +6,6 @@ public class Student {
   private Address address;
   private String cohort;
 
+  private int grade;
+
 }
