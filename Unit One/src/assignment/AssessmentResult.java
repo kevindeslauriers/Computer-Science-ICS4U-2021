@@ -3,6 +3,8 @@ package assignment;
 public class AssessmentResult {
   private Assessment assessment;
   private Student student;
+  private Answer[] answers;
+  private boolean isMarked;
 
   /**
    * 
