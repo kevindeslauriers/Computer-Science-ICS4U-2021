@@ -33,7 +33,6 @@ public class Driver {
 public static void main(String[] args) {
   Driver driver = new Driver();
 
-  
   /**
    * Create a menu with the following functionality.
    * 1. Create new class
@@ -47,8 +46,8 @@ public static void main(String[] args) {
    * 8. Display a student's results for a specific course/class.
    * 9. Display the average for all of the students in a class.
    * 10. Display the average for a specific course.
-   * 11. Display all the students by grade
-   * 12. Display all the students by cohort
+   * 11. Display all the students by grade (9-12)
+   * 12. Display all the students by cohort (A/B/O)
    */
 }
 
@@ -72,8 +71,8 @@ private static void loadAllClasses(String fileName) {
 
 }
 
-private static Student[] loadAllStudents(String string) {
-  return null;
+private static void loadAllStudents(String string) {
+  
 }
   
 }
