@@ -1,18 +1,39 @@
 package assignment;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
 public class Driver {
+
+  private static final int MAX_CLASSES = 50;
+  private static final int MAX_STUDENTS = 1000;
+
+  private static QuestionBank qBank;
+  private static Student[] students;
+  private static Class[] classes;
+
+
+  public Driver(){
+    qBank = new QuestionBank("src\\assignment\\questionBank.dat");
+
+    /**
+     * Create a list of students (Load from a file)
+     */
+    loadAllStudents("src\\assignment\\students.dat");
   
+     /**
+      * Create a list of classes (Load from a file)
+      */
+    loadAllClasses("src\\assignment\\courses.dat");
+  
+  }
+
+
 public static void main(String[] args) {
-  QuestionBank qBank = new QuestionBank("src\\assignment\\questionBank.dat");
+  Driver driver = new Driver();
 
-  /**
-   * Create a list of students (Load from a file)
-   */
-
-   /**
-    * Create a list of classes (Load from a file)
-    */
-
+  
   /**
    * Create a menu with the following functionality.
    * 1. Create new class
@@ -29,6 +50,30 @@ public static void main(String[] args) {
    * 11. Display all the students by grade
    * 12. Display all the students by cohort
    */
+}
+
+private static void loadAllClasses(String fileName) {
+  try{
+    Scanner scanner = new Scanner(new File(fileName));
+    int numClasses = 0;
+    classes = new Class[MAX_CLASSES];
+    while(scanner.hasNextLine()){
+      String name = scanner.nextLine().split(":")[1].trim();
+      String courseCode = scanner.nextLine().split(":")[1].trim();
+
+      Class c = new Class(name, courseCode);
+      classes[numClasses] = c;
+      numClasses++;
+    }
+  }catch(FileNotFoundException ex){
+
+  }
+
+
+}
+
+private static Student[] loadAllStudents(String string) {
+  return null;
 }
   
 }

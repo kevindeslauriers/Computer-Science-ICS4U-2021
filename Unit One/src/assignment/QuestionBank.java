@@ -16,11 +16,6 @@ public class QuestionBank {
   }
 
 
-  /**
-   * Add Question
-   */
-
-
 /**
     * Add all Questions
     */
