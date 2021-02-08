@@ -12,8 +12,8 @@ public class Driver {
   private static QuestionBank qBank;
   private static Student[] students;
   private static Class[] classes;
-  private int numClasses = 0;
-  private int numStudents = 0;
+  private static int numClasses = 0;
+  private static int numStudents = 0;
 
 
   public Driver(){
