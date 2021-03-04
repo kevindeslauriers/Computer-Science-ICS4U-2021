@@ -25,4 +25,8 @@ public class Queen {
     this.col = col;
   }
 
+  public static boolean isConflict(Queen q) {
+    return true;
+  }
+
 }
