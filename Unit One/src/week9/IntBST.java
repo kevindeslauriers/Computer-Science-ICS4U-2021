@@ -15,7 +15,7 @@ public class IntBST {
   }
 
   public void setRoot(IntBSTNode root) {
-    this.root = root;
+    this.root = root; // test
   }
 
   public void add(int x) {

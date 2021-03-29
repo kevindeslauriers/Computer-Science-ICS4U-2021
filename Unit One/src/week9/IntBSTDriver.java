@@ -2,7 +2,7 @@ package week9;
 
 public class IntBSTDriver {
   public static void main(String[] args) {
-    IntBST tree = new IntBST();
+    IntBST tree = new IntBST(); // test
     tree.add(17);
     tree.add(6);
     tree.add(18);
