@@ -1,14 +1,16 @@
 package week5;
 
-public class Contact {
+public class Contact implements Comparable {
   private String fName;
   private String lName;
   private String phone;
+  private String key;
 
   public Contact(String fName, String lName, String phone) {
     this.fName = fName;
     this.lName = lName;
     this.phone = phone;
+    this.key = lName + fName;
   }
 
   @Override
@@ -22,6 +24,10 @@ public class Contact {
 
   public void setfName(String fName) {
     this.fName = fName;
+  }
+
+  public String getKey() {
+    return this.key;
   }
 
   public String getlName() {
@@ -38,6 +44,13 @@ public class Contact {
 
   public void setPhone(String phone) {
     this.phone = phone;
+  }
+
+  @Override
+  public int compareTo(Object o) {
+    Contact c = (Contact) o;
+
+    return this.key.compareTo(c.key);
   }
 
 }
